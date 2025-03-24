@@ -83,7 +83,7 @@
 % Needed to deal a paragraphs
 \RequirePackage{parskip}
 % Needed to deal hyperlink
-\RequirePackage[hidelinks,unicode,pdfpagelabels=false]{hyperref}
+\RequirePackage[hidelinks,unicode,pdfpagelabels=false,colorlinks=true,urlcolor=red]{hyperref}
 \hypersetup{%
   pdftitle={},
   pdfauthor={},
@@ -706,6 +706,17 @@
     \ifthenelse{\equal{#4}{}}
     {}
     {\multicolumn{2}{L{17.0cm}}{\subdescriptionstyle{#4}} \\}
+  \end{tabular*}
+}
+
+% as \cventry, but squashed up to meet more recent role above; no company/location.
+\newcommand{\cventryprevrole}[3]{
+  \vspace{-3.0mm}
+  \setlength\tabcolsep{0pt}
+  \setlength{\extrarowheight}{0pt}
+  \begin{tabular*}{\textwidth}{@{\extracolsep{\fill}} L{2cm} L{\textwidth - 2cm}}
+    \entrydatestyle{#2} & \entrypositionstyle{#1} \\
+    & \descriptionstyle{#3}
   \end{tabular*}
 }
 

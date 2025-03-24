@@ -12,14 +12,66 @@
   %---------------------------------------------------------
   \cventry
   {Staff Production Engineer (IC6)} % Job title
-  {Meta (formerly known as Facebook)} % Organization
+  {Meta(Facebook)} % Organization
   {Dublin, Republic of Ireland} % Location
   {March 2011 - Present} % Date(s)
   {
-    write me
+    I naturally gravitated towards core infrastructure, and worked on internal core systems like DNS, LDAP, NTP, monitoring tooling, and
+    tooling to help with data center automation tooling (bare metal provisioning space).
+    I have driven various initiatives to improve the performance and reliability of our core infrastructure services bringing
+    down bare metal provisioning times.
+    Recently I have moved to the Network OS team, working on redesigning the network operating system for our FBOSS switches.
   }
 
-  %---------------------------------------------------------
+  \cventryprevrole
+  {Production Engineer (ClusterOps -> ClusterInfra -> Host Provisioning Engineering -> DC Bootstrap)}
+  {April 2014 \newline 2020}
+  {
+    After the SRO team automated itself out of existence thanks to automation, I moved to the ClusterOps team.
+    The ClusterOps team was responsible for core infrastructure services like DNS, LDAP, NTP, DHCP, TFTP and internal services
+    to orchestrate bare metal provisioning.
+    \begin{cvitems}
+      \item {DHCP infrastructure hoverhaul: In 2013/2014 I rewrote the DHCP infrastructure from scratch, replacing the old
+                  ISC DHCPd with a new system that was more reliable, scalable and easier to manage. The system was based on ISC KEA
+                  and implemented C++ hook to integrate with Facebook's internal systems.I made a presentation about it
+                  at SRECON EMEA 2015, and an interview on the ISC blog.}
+      \item \texttt{dhcplb}:  I wrote most of the code that runs Facebook’s DHCP infrastructure, including
+      an open source DHCP library at https://github.com/insomniacslk/dhcp that is used by several big tech
+      companies. After the rewrite, this became one of Meta’s most reliable services, with near-zero
+      operations. The cleaner structure made it easy to modify and test by other teams, simplifying the
+      creation of new, specialized use cases.
+      \item {Core infra services:}
+    \end{cvitems}
+  }
+
+  \cventryprevrole
+  {Site Reliability Engineer (SRO team)}
+  {
+    March 2011 \newline April 2014
+  }
+  {
+    I joined Facebook in 2011 as a Site Reliability Engineer (SRE) in the Site Reliability Operations (SRO) team.
+    The SRO team was a follow the sun team, with a sister team in Palo Alto, responsible for being the first
+    responder for the reliability of the entire Facebook infrastructure.
+    This gave me the opportunity to learn a lot about internal technologies and systems.
+    I learned how to manage systems at scale, how to deal with incidents/disasters.
+    Being based in Dublin gave me the opportunity to work during quiet mostly incident free hours, which has allowed
+    me to focus on automation and tooling.
+    \vspace{2mm}
+    \begin{cvitems}
+      \item {Contributed to the development of internal tooling like \href{https://engineering.fb.com/2011/09/15/data-center-engineering/making-facebook-self-healing/}{FBAR}, Facebook Auto Remediation, HostChangeLog, etc}
+      \item {Performed emergency hotfixing and pushing of the www application}
+      \item {Performed cluster maintenances: kernel updates, OS updates, host reprovisioning, and others}
+      \item {Troubleshooted broken hardware and software issues}
+      \item {Contributed migrating fleet from \texttt{cfengine2} to \texttt{chef}}
+      \item {Architected and implemented Facebook's initial \texttt{netconsole} monitoring system for kernel-level diagnostics.
+                  The solution leveraged Linux netconsole module to capture kernel printk messages via UDP/syslog, enabling critical
+                  debugging capabilities when disk logging was unavailable. Designed and deployed a scalable architecture using
+                  cluster-based rsyslog daemons integrated with \texttt{scribe} infrastructure. This foundational work later evolved
+                  into \href{https://github.com/facebook/netconsd}{netconsd}, now maintained by the Kernel Platform Engineering team.}
+    \end{cvitems}
+  }
+
   \cventry
   {Senior Deployment Engineer} % Job title
   {NewBay Software} % Organization
@@ -40,7 +92,6 @@
     \end{cvitems}
   }
 
-  %---------------------------------------------------------
   \cventry
   {Unix System and Network Administrator, Programmer and IT Consultant} % Job title
   {MOVIA SpA} % Organization
@@ -55,5 +106,52 @@
     \end{cvitems}
   }
 
-  %---------------------------------------------------------
+  \cventry
+  {Unix Sysadmin and Network Administrator}
+  {ComputerLine SRL}
+  {Catania, Italy}
+  {December 2004 - September 2005}
+  {
+    Small web agency providing web hosting, web design, and IT consulting services to local businesses.
+    \begin{cvitems}
+      \item Ordinary maintenance of internet services like DNS server, Web servers, FTP servers, Mail servers etc.
+      \item DNS domains registration and maintenance.
+      \item Troubleshooting and, technical support for customers and internal staff.
+    \end{cvitems}
+  }
+
+  \cventry
+  {Web developer and system administrator}
+  {UZED@ SRL}
+  {Catania, Italy}
+  {December 2004 - September 2005}
+  {
+    Small web agency providing web hosting, web design, and IT consulting services to local businesses.
+    \begin{cvitems}
+      \item Ordinary maintenance of internet services like DNS server, Web servers, FTP servers, Mail servers etc.
+      \item DNS domains registration and maintenance.
+      \item Troubleshooting and, technical support for customers and internal staff.
+    \end{cvitems}
+  }
+
+  \cventry
+  {Web developer}
+  {University of Catania, Department of Engineering}
+  {Catania, Italy}
+  {January 2001 - December 2002}
+  {
+    I was responsible for building and maintaining the students e-learning portal.
+  }
+
+  \cventry
+  {Visual Basic developer}
+  {Infozoo Project}
+  {Catania, Italy}
+  {January 2001 - March 2002}
+  {
+    Small software house developing software for the retail sector.
+    I have worked as a Visual Basic coder, my mainly responsibility was writing drivers to enable
+    communication between electronic scales (on RS232).
+  }
+
 \end{cventries}
