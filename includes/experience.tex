@@ -1,7 +1,7 @@
 %-------------------------------------------------------------------------------
 %	SECTION TITLE
 %-------------------------------------------------------------------------------
-\cvsection{Work Experience}
+\cvsection{Experience}
 
 
 %-------------------------------------------------------------------------------
@@ -16,33 +16,14 @@
   {Dublin, Republic of Ireland} % Location
   {March 2011 - Present} % Date(s)
   {
-    I naturally gravitated towards core infrastructure, and worked on internal core systems like DNS, LDAP, NTP, monitoring tooling, and
-    tooling to help with data center automation tooling (bare metal provisioning space).
-    I have driven various initiatives to improve the performance and reliability of our core infrastructure services bringing
-    down bare metal provisioning times.
-    Recently I have moved to the Network OS team, working on redesigning the network operating system for our FBOSS switches.
+    Progressed from IC3 to IC6, advancing from being an IC3 on a Tier 1 with infrastructure-wide support responsibilities to
+    leading critical datacenter automation initiatives in the bare metal provisoining space.
+    Lately I have spearheaded an effor to transform the way
+    we manage the Operating System for Meta's custom network switch infrastructure
+    \href{https://engineering.fb.com/2015/03/10/data-center-engineering/facebook-open-switching-system-fboss-and-wedge-in-the-open/}{(FBOSS)},
+    focusing on scalability, reliability, ownership and time to provision improvements.
   }
-
-  \cventryprevrole
-  {Production Engineer (ClusterOps -> ClusterInfra -> Host Provisioning Engineering -> DC Bootstrap)}
-  {April 2014 \newline 2020}
-  {
-    After the SRO team automated itself out of existence thanks to automation, I moved to the ClusterOps team.
-    The ClusterOps team was responsible for core infrastructure services like DNS, LDAP, NTP, DHCP, TFTP and internal services
-    to orchestrate bare metal provisioning.
-    \begin{cvitems}
-      \item {DHCP infrastructure hoverhaul: In 2013/2014 I rewrote the DHCP infrastructure from scratch, replacing the old
-                  ISC DHCPd with a new system that was more reliable, scalable and easier to manage. The system was based on ISC KEA
-                  and implemented C++ hook to integrate with Facebook's internal systems.I made a presentation about it
-                  at SRECON EMEA 2015, and an interview on the ISC blog.}
-      \item \texttt{dhcplb}:  I wrote most of the code that runs Facebook’s DHCP infrastructure, including
-      an open source DHCP library at https://github.com/insomniacslk/dhcp that is used by several big tech
-      companies. After the rewrite, this became one of Meta’s most reliable services, with near-zero
-      operations. The cleaner structure made it easy to modify and test by other teams, simplifying the
-      creation of new, specialized use cases.
-      \item {Core infra services:}
-    \end{cvitems}
-  }
+  \vspace{5mm}
 
   \cventryprevrole
   {Site Reliability Engineer (SRO team)}
@@ -71,6 +52,49 @@
                   into \href{https://github.com/facebook/netconsd}{netconsd}, now maintained by the Kernel Platform Engineering team.}
     \end{cvitems}
   }
+
+  \cventryprevrole
+  {Production Engineer (Teams: ClusterOps -> ClusterInfra -> Host Provisioning Engineering -> DC Bootstrap)}
+  {April 2014 \newline 2022}
+  {
+    Following the successful automation of the SRO team's core responsibilities, the team was strategically dissolved and
+    members were presented with opportunities to transition into new specialized focus areas.
+    While several colleagues moved to product teams, I chose to remain in infrastructure by joining the ClusterOps team.
+    This team managed essential infrastructure services including DNS, LDAP, NTP, DHCP, TFTP, and bare metal provisioning systems.
+    During this period, I achieved several significant technical milestones:
+    \vspace{2mm}
+    \begin{cvitems}
+      \item {\textbf{DHCP Infrastructure Modernization}: Led the complete redesign of Meta's DHCP infrastructure,
+                  implementing ISC KEA with custom C++ hooks for internal system integration. This initiative
+                  significantly improved reliability and scalability. Presented the architecture at \href{https://www.usenix.org/conference/srecon15europe/program/presentation/failla}{SRECON EMEA 2015}
+                  and was featured in \href{https://www.isc.org/blogs/how-facebook-is-using-kea-in-the-datacenter/}{the ISC's blog.}}
+      \item {\textbf{IPv6-only Initiative}: Collaborated on a critical infrastructure project to transition
+                  data centers to IPv6-only addressing, addressing RFC 1918 address space constraints. Led the
+                  adaptation of the PXEboot stack and OS installation systems to support IPv6-only environments, contributing
+                  to Meta's pioneering IPv6 adoption \href{https://www.internetsociety.org/resources/deploy360/2014/case-study-facebook-moving-to-an-ipv6-only-internal-network/}{and praised by the Internet Society.}}
+      \item {\textbf{More DHCP infrastructure improvements}: Architected and implemented \texttt{dhcplb}, a high-performance
+                  DHCP load balancer in Go. The project evolved from a hackathon prototype to a production-grade
+                  solution, featuring IPv6 support and sophisticated load balancing algorithms. The initiative spawned
+                  an industry-adopted open-source DHCP library and later expanded to include server-side functionality,
+                  becoming a cornerstone of Meta's network infrastructure.}
+      \item {Spearheaded the modernization of the PXEboot infrastructure, leading a complete rewrite from Python
+                  to Go to enhance performance and reliability.}
+      \item {Led the team in developing of a custom OS installation solution, replacing traditional RedHat
+                  anaconda/kickstart systems with an optimized, more highly integrated with Facebook's infra, purpose-built installer utilizing custom bootloader, ramdisk and an initrd based on \href{https://github.com/u-root/u-root}{u-root}.}
+    \end{cvitems}
+  }
+
+  \cventryprevrole
+  {Production Engineer (Network OS team)}
+  {2022 \newline Present}
+  {
+    In 2022 I convinced leadership to start a new team to focus on redesigning the Operating System for Meta's custom network switch infrastructure.
+    \begin{cvitems}
+      \item {The design took a different approach from the traditional way of managing operating systems at Meta where a vanilla OS is installed and then configured with puppet/chef/ansible. This was taking too much time and was not reliable enough.}
+      \item{The new approach consistent in building immutable images that are then deployed to the switches. The images are built with all the necessary configuration and software pre-installed. This brought down provisioning time from hours to ~15 minutes.}
+    \end{cvitems}
+  }
+
 
   \cventry
   {Senior Deployment Engineer} % Job title
