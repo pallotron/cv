@@ -17,11 +17,11 @@
   {March 2011 - Present} % Date(s)
   {
     Progressed from IC3 to IC6, advancing from being an IC3 on a Tier 1 with infrastructure-wide support responsibilities to
-    leading critical datacenter automation initiatives in the bare metal provisoining space.
-    Lately I have spearheaded an effor to transform the way
+    driving critical datacenter automation initiatives in the bare metal provisioning space.
+    Recently, I have led efforts to transform the way
     we manage the Operating System for Meta's custom network switch infrastructure
     \href{https://engineering.fb.com/2015/03/10/data-center-engineering/facebook-open-switching-system-fboss-and-wedge-in-the-open/}{(FBOSS)},
-    focusing on scalability, reliability, ownership and time to provision improvements.
+    focusing on scalability, reliability, ownership, and time-to-provision improvements.
   }
   \vspace{5mm}
 
@@ -31,16 +31,16 @@
     March 2011 \newline April 2014
   }
   {
-    I commenced my tenure at Facebook in 2011 as a Site Reliability Engineer (SRE) within the Site Reliability Operations (SRO) team. The SRO team operated on a follow-the-sun model, with a counterpart team in Palo Alto, ensuring round-the-clock reliability of Facebook's infrastructure. This role provided me with extensive exposure to internal technologies and systems, and honed my skills in managing large-scale systems and handling incidents and disasters. Being based in Dublin allowed me to work during relatively quiet, incident-free hours, which enabled me to concentrate on automation and tooling development.
+    I began my tenure at Facebook in 2011 as a Site Reliability Engineer (SRE) within the Site Reliability Operations (SRO) team. The SRO team operated on a follow-the-sun model, with a counterpart team in Palo Alto, ensuring round-the-clock reliability of Facebook's infrastructure. This role provided me with extensive exposure to internal technologies and systems, and honed my skills in managing large-scale systems and handling incidents and disasters. Being based in Dublin allowed me to focus on automation and tooling development during quieter hours.
     \vspace{2mm}
     \begin{cvitems}
-      \item {Contributed to the development of internal tooling like \href{https://engineering.fb.com/2011/09/15/data-center-engineering/making-facebook-self-healing/}{FBAR}, Facebook Auto Remediation, HostChangeLog, etc}
-      \item {Performed emergency hotfixing and pushing of the www application}
-      \item {Performed cluster maintenances: kernel updates, OS updates, host reprovisioning, and others}
-      \item {Troubleshooted broken hardware and software issues}
-      \item {Contributed migrating fleet from \texttt{cfengine2} to \texttt{chef}}
+      \item {Contributed in developing internal tooling like \href{https://engineering.fb.com/2011/09/15/data-center-engineering/making-facebook-self-healing/}{FBAR}, Facebook Auto Remediation, HostChangeLog, etc.}
+      \item {Drove emergency hotfixing and pushing of the www application.}
+      \item {Contributed developing cluster maintenances tools and perform critical maintenances like kernel updates, OS updates, host reprovisioning, and others.}
+      \item {Diagnosed and resolved complex hardware and software issues.}
+      \item {Contributed to the migration of the fleet from \texttt{cfengine2} to \texttt{chef}.}
       \item {Architected and implemented Facebook's initial \texttt{netconsole} monitoring system for kernel-level diagnostics.
-                  The solution leveraged Linux netconsole module to capture kernel printk messages via UDP/syslog, enabling critical
+                  The solution leveraged the Linux netconsole module to capture kernel printk messages via UDP/syslog, enabling critical
                   debugging capabilities when disk logging was unavailable. Designed and deployed a scalable architecture using
                   cluster-based rsyslog daemons integrated with \texttt{scribe} infrastructure. This foundational work later evolved
                   into \href{https://github.com/facebook/netconsd}{netconsd}, now maintained by the Kernel Platform Engineering team.}
@@ -58,22 +58,23 @@
     During this period, I achieved several significant technical milestones:
     \vspace{2mm}
     \begin{cvitems}
-      \item {\textbf{DHCP Infrastructure Modernization}: Led the complete redesign of Meta's DHCP infrastructure,
+      \item {\textbf{DHCP Infrastructure Modernization}: Designed and led the complete redesign of Meta's DHCP infrastructure,
                   implementing ISC KEA with custom C++ hooks for internal system integration. This initiative
                   significantly improved reliability and scalability. Presented the architecture at \href{https://www.usenix.org/conference/srecon15europe/program/presentation/failla}{SRECON EMEA 2015}
                   and was featured in \href{https://www.isc.org/blogs/how-facebook-is-using-kea-in-the-datacenter/}{the ISC's blog.}}
-      \item {\textbf{IPv6-only Initiative}: Collaborated on a critical infrastructure project to transition
-                  data centers to IPv6-only addressing, addressing RFC 1918 address space constraints. Led the
+      \item {\textbf{IPv6-only Initiative}: Participated to a critical infrastructure project to transition
+                  data centers to IPv6-only addressing, addressing RFC 1918 address space constraints. In that context I led the
                   adaptation of the PXEboot stack and OS installation systems to support IPv6-only environments, contributing
-                  to Meta's pioneering IPv6 adoption \href{https://www.internetsociety.org/resources/deploy360/2014/case-study-facebook-moving-to-an-ipv6-only-internal-network/}{and praised by the Internet Society.}}
-      \item {\textbf{More DHCP infrastructure improvements}: Architected and implemented \texttt{dhcplb}, a high-performance
+                  to Meta's pioneering IPv6 adoption \href{https://www.internetsociety.org/resources/deploy360/2014/case-study-facebook-moving-to-an-ipv6-only-internal-network/}{and praised by the Internet Society}.
+                  This enabled the migration and scaling up to hosting millions of servers.}
+      \item {\textbf{More DHCP infrastructure improvements}: Designed and implemented \texttt{dhcplb}, a high-performance
                   DHCP load balancer in Go. The project evolved from a hackathon prototype to a production-grade
                   solution, featuring IPv6 support and sophisticated load balancing algorithms. The initiative spawned
                   an industry-adopted open-source DHCP library and later expanded to include server-side functionality,
                   becoming a cornerstone of Meta's network infrastructure.}
-      \item {Spearheaded the modernization of the PXEboot infrastructure, leading a complete rewrite from Python
+      \item {Modernized the PXEboot infrastructure, leading a complete rewrite from Python
                   to Go to enhance performance and reliability.}
-      \item {Led the team in developing of a custom OS installation solution, replacing traditional RedHat
+      \item {Led the development of a custom OS installation solution, replacing traditional RedHat
                   anaconda/kickstart systems with an optimized, more highly integrated with Facebook's infra, purpose-built installer utilizing custom bootloader, ramdisk and an initrd based on \href{https://github.com/u-root/u-root}{u-root}.}
     \end{cvitems}
   }
@@ -84,8 +85,8 @@
   {
     In 2022 I convinced leadership to start a new team to focus on redesigning the Operating System for Meta's custom network switch infrastructure.
     \begin{cvitems}
-      \item {The design took a different approach from the traditional way of managing operating systems at Meta where a vanilla OS is installed and then configured with puppet/chef/ansible. This was taking too much time and was not reliable enough.}
-      \item{The new approach consistent in building immutable images that are then deployed to the switches. The images are built with all the necessary configuration and software pre-installed. This brought down provisioning time from hours to ~15 minutes.}
+      \item {Designed and drove a new approach to managing operating systems at Meta, moving away from the traditional model of installing a vanilla OS and configuring it with chef.}
+      \item{Owned the development of an immutable image-based system, where images are built with all necessary configuration and software pre-installed. This reduced provisioning time from hours to ~15 minutes.}
     \end{cvitems}
   }
 
@@ -100,9 +101,9 @@
     The company was acquired by RIM and subsequently sold to Synchronoss Technologies.
     \vspace{2mm}
     \begin{cvitems} % Description(s) of tasks/responsibilities
-      \item Managed software deployment and customer integration projects for major telecommunication clients, including T-Mobile (Germany/US) and Telstra (Australia).
-      \item Provided advanced troubleshooting and issue resolution for MMS, SMS, standalone, and web-based applications.
-      \item Developed and maintained software deployment tooling.
+      \item Led software deployment and customer integration projects for major telecommunication clients, including T-Mobile (Germany/US) and Telstra (Australia).
+      \item Drove advanced troubleshooting and issue resolution for MMS, SMS, standalone, and web-based applications.
+      \item Designed and maintained software deployment tooling.
       \item Executed front-end deployments, ensuring seamless user experience and functionality.
       \item Configured and deployed VPNs with various telecommunication companies to establish secure SMS/MMS gateways.
       \item Proficient in a diverse technology stack, including Cisco IPSEC VPNs and networks, Oracle/MySQL databases, Java Messaging Systems, F5 BigIP Load Balancers, Red Hat and Solaris operating systems, and Tomcat/JBoss application servers.
@@ -117,8 +118,8 @@
   {
     \begin{cvitems} % Description(s) of tasks/responsibilities
       \item Administered and maintained the company's corporate network infrastructure across three Italian offices (Rome, Milan, Catania).
-      \item Managed and secured the corporate intranet utilizing OpenVPN and Cisco routers.
-      \item Oversaw the company's web presence, mail servers, mailing lists, version control systems (CVS), and internal ticketing systems.
+      \item Designed and secured the corporate intranet utilizing OpenVPN and Cisco routers.
+      \item Owned the company's web presence, mail servers, mailing lists, version control systems (CVS), and internal ticketing systems.
       \item Provided expert consultation to Nokia Italy, Vodafone Italy, and LogicaCMG on an as-needed basis.
     \end{cvitems}
   }
@@ -131,23 +132,24 @@
   {
     Small web agency providing web hosting, web design, and IT consulting services to local businesses.
     \begin{cvitems}
-      \item Ordinary maintenance of internet services like DNS server, Web servers, FTP servers, Mail servers etc.
-      \item DNS domains registration and maintenance.
-      \item Troubleshooting and, technical support for customers and internal staff.
+      \item Owned maintenance of internet services like DNS server, Web servers, FTP servers, Mail servers etc.
+      \item Managed DNS domains registration and maintenance.
+      \item Diagnosed and resolved technical issues for customers and internal staff.
     \end{cvitems}
   }
 
   \cventry
-  {Web developer and system administrator}
+  {L.A.M.P. Web developer and system administrator}
   {UZED@ SRL}
   {Catania, Italy}
   {December 2004 - September 2005}
   {
     Small web agency providing web hosting, web design, and IT consulting services to local businesses.
     \begin{cvitems}
-      \item Ordinary maintenance of internet services like DNS server, Web servers, FTP servers, Mail servers etc.
-      \item DNS domains registration and maintenance.
-      \item Troubleshooting and, technical support for customers and internal staff.
+      \item Owned maintenance of internet services like DNS server, Web servers, FTP servers, Mail servers etc.
+      \item Managed DNS domains registration and maintenance.
+      \item Diagnosed and resolved technical issues for customers and internal staff.
+      \item Developed web applications for customers using PHP and MySQL.
     \end{cvitems}
   }
 
@@ -157,7 +159,7 @@
   {Catania, Italy}
   {January 2001 - December 2002}
   {
-    I was responsible for building and maintaining the students e-learning portal.
+    I was responsible for designing and maintaining the students' e-learning portal.
   }
 
   \cventry
@@ -167,7 +169,7 @@
   {January 2001 - March 2002}
   {
     Small software house developing software for the retail sector.
-    I have worked as a Visual Basic coder, my mainly responsibility was writing drivers to enable
+    I worked as a Visual Basic developer, primarily responsible for designing drivers to enable
     communication between electronic scales (on RS232).
   }
 
