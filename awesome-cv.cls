@@ -83,12 +83,16 @@
 % Needed to deal a paragraphs
 \RequirePackage{parskip}
 % Needed to deal hyperlink
-\RequirePackage[hidelinks,unicode,pdfpagelabels=false,colorlinks=true,urlcolor=red]{hyperref}
+\RequirePackage[hidelinks,unicode,pdfpagelabels=false,colorlinks=true]{hyperref}
 \hypersetup{%
   pdftitle={},
   pdfauthor={},
   pdfsubject={},
-  pdfkeywords={}
+  pdfkeywords={},
+  colorlinks=true,
+  % linkcolor=blue,
+  % filecolor=magenta,
+  urlcolor=awesome,
 }
 % Solves issues Warning: File `cv.out' has changed
 \RequirePackage{bookmark}
