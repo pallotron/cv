@@ -1,12 +1,5 @@
-%-------------------------------------------------------------------------------
-%	SECTION TITLE
-%-------------------------------------------------------------------------------
 \cvsection{Experience}
 
-
-%-------------------------------------------------------------------------------
-%	CONTENT
-%-------------------------------------------------------------------------------
 \begin{cventries}
 
   %---------------------------------------------------------
@@ -55,6 +48,7 @@
     members were presented with opportunities to transition into new specialized focus areas.
     While several colleagues moved to product teams, I chose to remain in infrastructure by joining the ClusterOps team.
     This team managed essential infrastructure services including DNS, LDAP, NTP, DHCP, TFTP, and bare metal provisioning systems.
+    \newline
     During this period, I achieved several significant technical milestones:
     \vspace{2mm}
     \begin{cvitems}
@@ -67,14 +61,14 @@
                   adaptation of the PXEboot stack and OS installation systems to support IPv6-only environments, contributing
                   to Meta's pioneering IPv6 adoption \href{https://www.internetsociety.org/resources/deploy360/2014/case-study-facebook-moving-to-an-ipv6-only-internal-network/}{and praised by the Internet Society}.
                   This enabled the migration and scaling up to hosting millions of servers.}
-      \item {\textbf{More DHCP infrastructure improvements}: Designed and implemented \texttt{dhcplb}, a high-performance
+      \item {\textbf{Designed and implemented \texttt{dhcplb}}, a high-performance
                   DHCP load balancer in Go. The project evolved from a hackathon prototype to a production-grade
                   solution, featuring IPv6 support and sophisticated load balancing algorithms. The initiative spawned
                   an industry-adopted open-source DHCP library and later expanded to include server-side functionality,
                   becoming a cornerstone of Meta's network infrastructure.}
-      \item {Modernized the PXEboot infrastructure, leading a complete rewrite from Python
-                  to Go to enhance performance and reliability.}
-      \item {Led the development of a custom OS installation solution, replacing traditional RedHat
+      \item {\textbf{Modernized the PXEboot infrastructure, leading complete rewrite from Python
+                    to Go} to enhance performance and reliability and support ever growing demand/capacity.}
+      \item {\textbf{Led the development of a custom OS installation solution}, replacing traditional RedHat
                   anaconda/kickstart systems with an optimized, more highly integrated with Facebook's infra, purpose-built installer utilizing custom bootloader, ramdisk and an initrd based on \href{https://github.com/u-root/u-root}{u-root}.}
     \end{cvitems}
   }
@@ -83,10 +77,13 @@
   {Production Engineer (Network OS team)}
   {2022 \newline Present}
   {
-    In 2022 I convinced leadership to start a new team to focus on redesigning the Operating System for Meta's custom network switch infrastructure.
+    In 2022, I started collaborating with people in the US on efforts to redesign the Operating System management approach at Meta, transitioning from a traditional model of provisioning a vanilla OS followed by configuration with Chef at first boot (more time-intensive and less efficient), to an immutable image-based model which
+    significantly reduces provisioning time and increases reliability.
+    \vspace{2mm}
     \begin{cvitems}
-      \item {Designed and drove a new approach to managing operating systems at Meta, moving away from the traditional model of installing a vanilla OS and configuring it with chef.}
-      \item{Owned the development of an immutable image-based system, where images are built with all necessary configuration and software pre-installed. This reduced provisioning time from hours to ~15 minutes.}
+      \item Recognizing the challenges of organizational adoption, \textbf{I successfully advocated for the creation of a dedicated team} to implement this new approach for Meta's custom network switch infrastructure (FBOSS). This required \textbf{extensive collaboration and alignment with stakeholders across various levels}, including managers, directors, VPs, and ICs, to emphasize the critical need for this transformation to enhance reliability, scalability, and security.
+      \item The initial prototype demonstrated a dramatic improvement, \textbf{reducing provisioning time from 2 hours to 15 minutes.}
+      \item This success \textbf{catalyzed enhancements in key operational processes}, including rack ingestion, rack moves, and repair workflows, ultimately driving greater efficiency and reliability across the network infrastructure.
     \end{cvitems}
   }
 
@@ -101,9 +98,9 @@
     The company was acquired by RIM and subsequently sold to Synchronoss Technologies.
     \vspace{2mm}
     \begin{cvitems} % Description(s) of tasks/responsibilities
-      \item Led software deployment and customer integration projects for major telecommunication clients, including T-Mobile (Germany/US) and Telstra (Australia).
-      \item Drove advanced troubleshooting and issue resolution for MMS, SMS, standalone, and web-based applications.
-      \item Designed and maintained software deployment tooling.
+      \item Managed software deployment and customer integration projects for major telecommunication clients, including T-Mobile (Germany/US) and Telstra (Australia).
+      \item Provided advanced troubleshooting and issue resolution for MMS, SMS, standalone, and web-based applications.
+      \item Developed and maintained software deployment tooling.
       \item Executed front-end deployments, ensuring seamless user experience and functionality.
       \item Configured and deployed VPNs with various telecommunication companies to establish secure SMS/MMS gateways.
       \item Proficient in a diverse technology stack, including Cisco IPSEC VPNs and networks, Oracle/MySQL databases, Java Messaging Systems, F5 BigIP Load Balancers, Red Hat and Solaris operating systems, and Tomcat/JBoss application servers.
@@ -118,8 +115,8 @@
   {
     \begin{cvitems} % Description(s) of tasks/responsibilities
       \item Administered and maintained the company's corporate network infrastructure across three Italian offices (Rome, Milan, Catania).
-      \item Designed and secured the corporate intranet utilizing OpenVPN and Cisco routers.
-      \item Owned the company's web presence, mail servers, mailing lists, version control systems (CVS), and internal ticketing systems.
+      \item Managed and secured the corporate intranet utilizing OpenVPN and Cisco routers.
+      \item Oversaw the company's web presence, mail servers, mailing lists, version control systems (CVS), and internal ticketing systems.
       \item Provided expert consultation to Nokia Italy, Vodafone Italy, and LogicaCMG on an as-needed basis.
     \end{cvitems}
   }
@@ -132,9 +129,9 @@
   {
     Small web agency providing web hosting, web design, and IT consulting services to local businesses.
     \begin{cvitems}
-      \item Owned maintenance of internet services like DNS server, Web servers, FTP servers, Mail servers etc.
-      \item Managed DNS domains registration and maintenance.
-      \item Diagnosed and resolved technical issues for customers and internal staff.
+      \item Ordinary maintenance of internet services like DNS server, Web servers, FTP servers, Mail servers etc.
+      \item DNS domains registration and maintenance.
+      \item Troubleshooting and, technical support for customers and internal staff.
     \end{cvitems}
   }
 
@@ -146,9 +143,9 @@
   {
     Small web agency providing web hosting, web design, and IT consulting services to local businesses.
     \begin{cvitems}
-      \item Owned maintenance of internet services like DNS server, Web servers, FTP servers, Mail servers etc.
-      \item Managed DNS domains registration and maintenance.
-      \item Diagnosed and resolved technical issues for customers and internal staff.
+      \item Ordinary maintenance of internet services like DNS server, Web servers, FTP servers, Mail servers etc.
+      \item DNS domains registration and maintenance.
+      \item Troubleshooting and, technical support for customers and internal staff.
       \item Developed web applications for customers using PHP and MySQL.
     \end{cvitems}
   }
@@ -159,7 +156,7 @@
   {Catania, Italy}
   {January 2001 - December 2002}
   {
-    I was responsible for designing and maintaining the students' e-learning portal.
+    I was responsible for building and maintaining the students e-learning portal.
   }
 
   \cventry
@@ -169,7 +166,7 @@
   {January 2001 - March 2002}
   {
     Small software house developing software for the retail sector.
-    I worked as a Visual Basic developer, primarily responsible for designing drivers to enable
+    I have worked as a Visual Basic coder, my mainly responsibility was writing drivers to enable
     communication between electronic scales (on RS232).
   }
 
