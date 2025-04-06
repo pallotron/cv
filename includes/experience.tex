@@ -19,24 +19,16 @@
   \vspace{5mm}
 
   \cventryprevrole
-  {Site Reliability Engineer (IC3->IC4) - Team(s): SRO}
+  {Production Engineer (IC6) - Team(s): Network OS}
+  {2022 \newline Present}
   {
-    March 2011 \newline April 2014
-  }
-  {
-    I began my tenure at Facebook in 2011 as a Site Reliability Engineer (SRE) within the Site Reliability Operations (SRO) team. The SRO team operated on a follow-the-sun model, with a counterpart team in Palo Alto, ensuring round-the-clock reliability of Facebook's infrastructure. This role provided me with extensive exposure to internal technologies and systems, and honed my skills in managing large-scale systems and handling incidents and disasters. Being based in Dublin allowed me to focus on automation and tooling development during quieter hours.
+    In 2022, I started collaborating with people in the US on efforts to redesign the Operating System management approach at Meta, transitioning from a traditional model of provisioning a vanilla OS followed by configuration with Chef at first boot (more time-intensive and less efficient), to an immutable image-based model which
+    significantly reduces provisioning time and increases reliability.
     \vspace{2mm}
     \begin{cvitems}
-      \item {Contributed in developing internal tooling like \href{https://engineering.fb.com/2011/09/15/data-center-engineering/making-facebook-self-healing/}{FBAR}, Facebook Auto Remediation, HostChangeLog, etc.}
-      \item {Drove emergency hotfixing and pushing of the www application durnig Dublin hours.}
-      \item {Contributed developing cluster maintenances tools and perform critical maintenances like kernel updates, OS updates, host reprovisioning, and others.}
-      \item {Diagnosed and resolved complex hardware and software issues.}
-      \item {Contributed to the migration of the fleet from \texttt{cfengine2} to \texttt{chef}.}
-      \item {Architected and implemented Facebook's initial \texttt{netconsole} monitoring system for kernel-level diagnostics.
-                  The solution leveraged the Linux netconsole module to capture kernel printk messages via UDP/syslog, enabling critical
-                  debugging capabilities when disk logging was unavailable. Designed and deployed a scalable architecture using
-                  cluster-based rsyslog daemons integrated with \texttt{scribe} infrastructure. This foundational work later evolved
-                  into \href{https://github.com/facebook/netconsd}{netconsd}, now maintained by the Kernel Platform Engineering team.}
+      \item Recognizing the challenges of organizational adoption, \textbf{I successfully advocated for the creation of a dedicated team} to implement this new approach for Meta's custom network switch infrastructure (FBOSS). This required \textbf{extensive collaboration and alignment with stakeholders across various levels}, including managers, directors, VPs, and ICs, to emphasize the critical need for this transformation to enhance reliability, scalability, and security.
+      \item The initial prototype demonstrated a dramatic improvement, \textbf{reducing provisioning time from 2 hours to 15 minutes.}
+      \item This success \textbf{catalyzed enhancements in key operational processes}, including rack ingestion, rack moves, and repair workflows, ultimately driving greater efficiency and reliability across the network infrastructure.
     \end{cvitems}
   }
 
@@ -74,16 +66,24 @@
   }
 
   \cventryprevrole
-  {Production Engineer (IC6) - Team(s): Network OS}
-  {2022 \newline Present}
+  {Site Reliability Engineer (IC3->IC4) - Team(s): SRO}
   {
-    In 2022, I started collaborating with people in the US on efforts to redesign the Operating System management approach at Meta, transitioning from a traditional model of provisioning a vanilla OS followed by configuration with Chef at first boot (more time-intensive and less efficient), to an immutable image-based model which
-    significantly reduces provisioning time and increases reliability.
+    March 2011 \newline April 2014
+  }
+  {
+    I began my tenure at Facebook in 2011 as a Site Reliability Engineer (SRE) within the Site Reliability Operations (SRO) team. The SRO team operated on a follow-the-sun model, with a counterpart team in Palo Alto, ensuring round-the-clock reliability of Facebook's infrastructure. This role provided me with extensive exposure to internal technologies and systems, and honed my skills in managing large-scale systems and handling incidents and disasters. Being based in Dublin allowed me to focus on automation and tooling development during quieter hours.
     \vspace{2mm}
     \begin{cvitems}
-      \item Recognizing the challenges of organizational adoption, \textbf{I successfully advocated for the creation of a dedicated team} to implement this new approach for Meta's custom network switch infrastructure (FBOSS). This required \textbf{extensive collaboration and alignment with stakeholders across various levels}, including managers, directors, VPs, and ICs, to emphasize the critical need for this transformation to enhance reliability, scalability, and security.
-      \item The initial prototype demonstrated a dramatic improvement, \textbf{reducing provisioning time from 2 hours to 15 minutes.}
-      \item This success \textbf{catalyzed enhancements in key operational processes}, including rack ingestion, rack moves, and repair workflows, ultimately driving greater efficiency and reliability across the network infrastructure.
+      \item {Contributed in developing internal tooling like \href{https://engineering.fb.com/2011/09/15/data-center-engineering/making-facebook-self-healing/}{FBAR}, Facebook Auto Remediation, HostChangeLog, etc.}
+      \item {Drove emergency hotfixing and pushing of the www application durnig Dublin hours.}
+      \item {Contributed developing cluster maintenances tools and perform critical maintenances like kernel updates, OS updates, host reprovisioning, and others.}
+      \item {Diagnosed and resolved complex hardware and software issues.}
+      \item {Contributed to the migration of the fleet from \texttt{cfengine2} to \texttt{chef}.}
+      \item {Architected and implemented Facebook's initial \texttt{netconsole} monitoring system for kernel-level diagnostics.
+                  The solution leveraged the Linux netconsole module to capture kernel printk messages via UDP/syslog, enabling critical
+                  debugging capabilities when disk logging was unavailable. Designed and deployed a scalable architecture using
+                  cluster-based rsyslog daemons integrated with \texttt{scribe} infrastructure. This foundational work later evolved
+                  into \href{https://github.com/facebook/netconsd}{netconsd}, now maintained by the Kernel Platform Engineering team.}
     \end{cvitems}
   }
 
